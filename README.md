@@ -1,6 +1,6 @@
 # task5-classes-interfaces-enums
 
-[![Build Status](https://travis-ci.com/itmo-java-basics-2020/task5-classes-interfaces-enums-<you-github>.svg?branch=master)](https://travis-ci.com/itmo-java-basics-2020/task5-classes-interfaces-enums-<you-github>)
+[![Build Status](https://travis-ci.com/itmo-java-basics-2020/task-5-cl-interface-for-database-server-pretendless.svg?branch=develop)](https://travis-ci.com/itmo-java-basics-2020/task-5-cl-interface-for-database-server-pretendless)
 
 Компания, где Вы работаете разрабатывает собственную СУБД типа ключ-значение. Требования к хранилищу простые - оно должно быть легковесным приложением на Java, которое позволяет долговечно (на диске) хранить пары ключ-значение и быстро (оценки производительность в данной работе не важны) возвращать значение по заданному ключу.
 
@@ -123,7 +123,7 @@
 Предлагаю реализовать класс `DatabaseCommands` , который и предоставляет абстрактный метод, описанный выше. Данный класс будет являться перечислением, каждая из констант-экземпляров которого будет инкапсулировать логику создания той или иной команды (реализовывать по-своему абстрактный метод). Названия констант перечисления будут совпадать с именами команд, что позволит получить экземпляр (как мы говорили на лекциях он будет являться [синглтоном](https://refactoring.guru/ru/design-patterns/singleton)) константы воспользовавшись некоторым методом класса `Enum` и не пользоваться никакими из условных операторов.
 
 Если присмотреться, то вот что выйдет:
-
+ 
 - мы создали некий интерфейс, который умеет возвращать команду
 
     DatabaseCommand getCommand(ExecutionEnvironment env, String... args);
